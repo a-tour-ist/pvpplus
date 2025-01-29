@@ -125,7 +125,7 @@ minetest.register_on_joinplayer(function(player)
 end)
 
 minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, tool_capabilities, dir, damage)
-	if not hitter:is_player() then
+	if not minetest.is_player(hitter) then
 		return false
 	end
 
